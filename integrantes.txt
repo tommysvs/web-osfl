@@ -5,3 +5,19 @@ Usuario: tommysvs
 Cuenta: 0801200406307
 Nombre: Carlos Andrés Flores Martínez
 Usuario: carlos78921
+
+Cuenta: 1208200200255
+Nombre: Rolando Arturo Tomé Valladares
+Usuario: Rola-ix
+
+Cuenta: 0201200500008
+Nombre: Gerardo Antonio Garcia Garin
+Usuario: Gerard169
+
+Cuenta: 0704200401001
+Nombre: Faury Geovanny Cerrato Mejia
+Usuario: FauryC
+
+Cuenta: 0601200403547
+Nombre: Kenneth David Zepeda Lopez
+Usuario: Kenn-dav
