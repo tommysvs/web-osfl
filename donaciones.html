@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apoye nuestra misión mediante una donación. Sus contribuciones ayudan a mantener nuestros programas activos.">
+    <title>Donaciones - Organización sin Fines de Lucro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Nuestra Organización</a>
+            <ul class="nav-links">
+                <li><a href="nosotros.html">Acerca de</a></li>
+                <li><a href="programas.html">Programas</a></li>
+                <li><a href="como_ayudar.html">Cómo Ayudar</a></li>
+                <li><a href="donaciones.html" class="active">Donaciones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <h1>Donaciones</h1>
+        <p>Gracias por apoyar nuestro trabajo. Cada donación nos permite continuar ayudando a más personas, ejecutar proyectos y ampliar nuestras actividades comunitarias.</p>
+
+        <section>
+            <h2>¿Cómo se utilizan las donaciones?</h2>
+            <ul>
+                <li>Financiar programas educativos y comunitarios.</li>
+                <li>Comprar materiales y recursos para talleres.</li>
+                <li>Apoyar el funcionamiento administrativo básico.</li>
+                <li>Organizar eventos y actividades sociales.</li>
+            </ul>
+        </section>
+
+        <section class="donation-form">
+            <h2>Realizar una donación</h2>
+
+            <form id="formDonacion">
+                <label for="donante">Nombre completo:</label>
+                <input type="text" id="donante" name="donante" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="monto">Monto a donar (USD):</label>
+                <input type="number" id="monto" name="monto" min="1" required>
+
+                <label for="metodo">Método de pago:</label>
+                <select id="metodo" name="metodo" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="deposito">Depósito Bancario</option>
+                </select>
+
+                <button type="submit" class="btn-donar">Donar ahora</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p> &copy; 2025 Nuestra Organización Sin Fines de Lucro</p>
+    </footer>
+</body>
+</html>

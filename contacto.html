@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Póngase en contacto con nuestra organización para consultas, apoyo o participación en nuestros proyectos.">
+    <title>Contáctenos - Organización sin Fines de Lucro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Nuestra Organización</a>
+            <ul class="nav-links">
+                <li><a href="nosotros.html">Acerca de</a></li>
+                <li><a href="programas.html">Programas</a></li>
+                <li><a href="como_ayudar.html">Cómo Ayudar</a></li>
+                <li><a href="contacto.html" class="active">Contáctenos</a></li>
+                <li><a href="donaciones.html" class="btn-donar">Donar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Contáctenos</h1>
+        <p>Gracias por su interés en nuestra misión. Puede escribirnos mediante el siguiente formulario o a través de nuestros medios de contacto.</p>
+
+        <section class="contact-info">
+            <h2>Información de contacto</h2>
+            <p><strong>Dirección:</strong> Barrio Centro, Calle Principal, Tegucigalpa, Honduras</p>
+            <p><strong>Teléfono:</strong> +504 9999-9999</p>
+            <p><strong>Email:</strong> contacto@nuestraong.org</p>
+            <p><strong>Horario:</strong> Lunes a Viernes, 8:00 AM - 4:00 PM</p>
+        </section>
+
+        <section class="contact-form">
+            <h2>Envíenos un mensaje</h2>
+
+            <form id="formContacto">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="asunto">Asunto:</label>
+                <input type="text" id="asunto" name="asunto" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+
+                <button type="submit" class="btn-enviar">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p> &copy; 2025 Nuestra Organización Sin Fines de Lucro</p>
+    </footer>
+</body>
+</html>
