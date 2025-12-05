@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Preguntas Frecuentes</title>
+    <meta name="description" content="FAQ">
+    <style>
+        
+
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        h1, h2 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .faq-item {
+            background-color: var(--white);
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            width: 100%;
+            background-color: #e9ecef;
+            color: var(--text-color);
+            padding: 1rem 1.5rem;
+            text-align: left;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background-color: #dee2e6;
+        }
+
+        .faq-question.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .faq-answer a {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            line-height: 1;
+            transition: transform 0.3s;
+        }
+
+        .faq-question.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+            background-color: var(--white);
+        }
+
+        .faq-answer.open {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            margin: 0;
+            padding: 0.5rem 0;
+        }
+
+        footer {
+            background-color: var(--text-color);
+            color: var(--light-bg);
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                width: 100%;
+            }
+
+            nav ul li a {
+                padding: 0.75rem 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav aria-label="Navegación Principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="acerca-de.html">Acerca de Nosotros</a></li>
+                    <li><a href="programas.html">Nuestros Programas</a></li>
+                    <li><a href="como-ayudar.html">Cómo Ayudar</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="contactenos.html">Contáctenos</a></li>
+                    <li><a href="donaciones.html">Donaciones</a></li>
+                    <li><a href="preguntas-frecuentes.html" aria-current="page">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Preguntas Frecuentes</h2>
+
+        <section id="faq-list">
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" aria-controls="answer-1" id="question-1">
+                    <span>1</span>
+                    <span class="faq-icon">&#9660;</span>
+                </button>
+                <div class="faq-answer" id="answer-1" aria-labelledby="question-1" role="region">
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" aria-controls="answer-2" id="question-2">
+                    <span>2</span>
+                    <span class="faq-icon">&#9660;</span>
+                </button>
+                <div class="faq-answer" id="answer-2" aria-labelledby="question-2" role="region">
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" aria-controls="answer-3" id="question-3">
+                    <span>3</span>
+                    <span class="faq-icon">&#9660;</span>
+                </button>
+                <div class="faq-answer" id="answer-3" aria-labelledby="question-3" role="region">
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" aria-controls="answer-4" id="question-4">
+                    <span>4</span>
+                    <span class="faq-icon">&#9660;</span>
+                </button>
+                <div class="faq-answer" id="answer-4" aria-labelledby="question-4" role="region">
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" aria-controls="answer-5" id="question-5">
+                    <span>5</span>
+                    <span class="faq-icon">&#9660;</span>
+                </button>
+                <div class="faq-answer" id="answer-5" aria-labelledby="question-5" role="region">
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>2025. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const questions = document.querySelectorAll('.faq-question');
+            function toggleAnswer(button) {
+                const answer = button.nextElementSibling;
+                const isActive = button.classList.contains('active');
+
+                questions.forEach(q => {
+                    if (q !== button && q.classList.contains('active')) {
+                        q.classList.remove('active');
+                        q.setAttribute('aria-expanded', 'false');
+                        q.nextElementSibling.classList.remove('open');
+                        q.nextElementSibling.style.maxHeight = '0';
+                    }
+                });
+
+                if (!isActive) {
+                    button.classList.add('active');
+                    button.setAttribute('aria-expanded', 'true');
+                    answer.classList.add('open');
+                    answer.style.maxHeight = answer.scrollHeight + 32 + 'px'; 
+                } else {
+                    button.classList.remove('active');
+                    button.setAttribute('aria-expanded', 'false');
+                    answer.classList.remove('open');
+                    answer.style.maxHeight = '0';
+                }
+            }
+
+            questions.forEach(button => {
+                button.addEventListener('click', () => {
+                    toggleAnswer(button);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
