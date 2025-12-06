@@ -3,13 +3,27 @@ const btnLeft = document.querySelector(".btn-left"),
       slider = document.querySelector("#slider"),
       sliderSection = document.querySelectorAll(".slider-section"),
       navToggle = document.querySelector(".nav-toggle"),
-      navMenu = document.querySelector(".nav-menu");
+      navMenu = document.querySelector(".nav-menu"),
+      pageLoader = document.getElementById("page-loader");
 
 let operacion = 0,
     counter = 0,
     widthImg = sliderSection.length > 0 ? 100 / sliderSection.length : 0;
 
 let intervalo;
+
+// LOADER
+if (pageLoader) {
+    window.addEventListener("load", () => {
+        const LOADER_MIN_MS = 800;
+        const HIDE_TRANSITION_MS = 500;
+
+        setTimeout(() => {
+            pageLoader.classList.add("hide");
+            setTimeout(() => pageLoader.remove(), HIDE_TRANSITION_MS);
+        }, LOADER_MIN_MS);
+    });
+}
 
 // HAMBURGUER MENU 
 if (navToggle && navMenu) {

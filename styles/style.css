@@ -10,6 +10,86 @@ body {
     background-color: #f0f0ea;
 }
 
+/* Loader */
+.loader {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 20% 20%, rgba(109, 40, 217, 0.08), transparent 35%),
+                radial-gradient(circle at 80% 30%, rgba(251, 146, 60, 0.12), transparent 35%),
+                radial-gradient(circle at 50% 70%, rgba(76, 29, 149, 0.08), transparent 40%),
+                #f0f0ea;
+    z-index: 9999;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.loader.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.75rem 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 18px;
+    border: 1px solid rgba(109, 40, 217, 0.15);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.loader-paw {
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    color: #6d28d9;
+    animation: paw-walk 1s infinite ease-in-out;
+}
+
+.loader-paw::before {
+    content: "\f1b0";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+.loader-paw:nth-child(2) {
+    color: #fb923c;
+    animation-delay: 0.12s;
+}
+
+.loader-paw:nth-child(3) {
+    color: #4d3b80;
+    animation-delay: 0.24s;
+}
+
+.loader-inner p {
+    margin: 0.25rem 0 0;
+    color: #4d3b80;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+@keyframes paw-walk {
+    0% {
+        transform: translateY(4px) scale(0.9);
+        opacity: 0.45;
+    }
+    50% {
+        transform: translateY(-8px) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(4px) scale(0.9);
+        opacity: 0.45;
+    }
+}
+
 /* Navigation bar */
 header {
     background: rgba(255, 255, 255, 0.7);
