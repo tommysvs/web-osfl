@@ -10,6 +10,7 @@ body {
     background-color: #f0f0ea;
 }
 
+/* Navigation bar */
 header {
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
@@ -223,80 +224,151 @@ h1, h2 {
     margin-bottom: 1.5rem;
 }
 
-section {
-    background-color: var(--white);
-    padding: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    margin-top: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
+/* Page banner*/
+.page-banner {
+    background: linear-gradient(135deg, #6d28d9 0%, #7c3aed 40%, #4c1d95 100%);
+    color: #f8f5ff;
+    padding: 4rem 2rem;
+    margin: 2rem auto 3rem;
+    max-width: 1200px;
     text-align: center;
-    transition: background-color 0.3s, transform 0.2s;
 }
 
-.btn-primary {
-    background-color: var(--secondary-color);
-    color: var(--white);
+.page-banner h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+    font-weight: 700;
 }
 
-.btn-primary:hover {
-    background-color: #5A6268;
-    transform: translateY(-2px);
+.page-banner p {
+    color: #e9ddff;
+    font-size: 1.1rem;
+    margin: 0;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.form-group {
+/* Contact page */
+.contact-form {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(109, 40, 217, 0.1);
+}
+
+.contact-form h2 {
+    text-align: center;
+    color: #4d3b80;
+    margin-bottom: 2rem;
+}
+
+#formContacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#formContacto label {
+    font-weight: 600;
+    color: #4d3b80;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+#formContacto input,
+#formContacto textarea {
+    padding: 0.75rem 1rem;
+    border: 2px solid #e0d7ff;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+#formContacto input:focus,
+#formContacto textarea:focus {
+    outline: none;
+    border-color: #6d28d9;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 0 3px rgba(109, 40, 217, 0.1);
+}
+
+#formContacto input::placeholder,
+#formContacto textarea::placeholder {
+    color: rgba(77, 59, 128, 0.5);
+}
+
+#formContacto textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.btn-enviar {
+    background-color: #fb923c;
+    color: #ffffff;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-enviar:hover {
+    background-color: #f97316;
+    box-shadow: 0 8px 16px rgba(251, 146, 60, 0.3);
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: 3rem 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-info p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    margin: 0;
+}
+
+.contact-info i {
+    display: block;
+    font-size: 2.5rem;
+    color: #6d28d9;
     margin-bottom: 1rem;
 }
 
-.form-group label {
+.contact-info strong {
+    color: #6d28d9;
+    font-weight: 700;
     display: block;
     margin-bottom: 0.5rem;
-    font-weight: bold;
+    font-size: 0.95rem;
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="number"],
-.form-group textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+.contact-info p > * {
+    margin: 0;
 }
 
-.donation-options label {
-    display: inline-block;
-    margin-right: 15px;
-    font-weight: normal;
-}
-
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    border: 1px solid #eee;
-    border-radius: 6px;
-    padding: 1.5rem;
-    text-align: center;
-    transition: box-shadow 0.3s;
-}
-
-.card:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
+/* Footer */
 
 .site-footer {
     background: linear-gradient(135deg, #6d28d9 0%, #7c3aed 40%, #4c1d95 100%);
@@ -339,7 +411,7 @@ section {
 }
 
 .footer-logo {
-    height: 50px;
+    height: 140px;
     width: auto;
     object-fit: contain;
 }
@@ -418,40 +490,13 @@ section {
     padding: 0 1rem;
 }
 
-@media (max-width: 768px) {
-    .footer-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .footer-inner {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .footer-brand,
-    .footer-volunteer,
-    .footer-contact {
-        align-items: flex-start;
-        text-align: left;
-    }
-
-    .footer-social {
-        justify-content: flex-start;
-    }
-}
-
-@media (max-width: 900px) {
-    .nav-menu ul li a {
-        font-size: 0.98rem;
-        padding: 0.4rem 0.7rem;
-    }
-    .logo-nav {
-        font-size: 1.1rem;
-    }
-}
+/* Responsive */
 
 @media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+
     .nav-toggle {
         display: block;
         background: none;
@@ -536,13 +581,71 @@ section {
         height: 40px;
     }
 
-    body {
-        padding-top: 70px;
+    .page-banner {
+        padding: 2.5rem 1rem;
+        margin: 1rem;
+        border-radius: 15px;
+    }
+
+    .page-banner h1 {
+        font-size: 1.8rem;
+    }
+
+    .page-banner p {
+        font-size: 1rem;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 2rem 1rem;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-info p {
+        padding: 1.5rem 1rem;
+    }
+
+    .contact-info i {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .contact-form {
+        max-width: 100%;
+        padding: 1.5rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-brand,
+    .footer-volunteer,
+    .footer-contact {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .footer-social {
+        justify-content: flex-start;
     }
 }
 
-@media (max-width: 768px) {
-    .card-grid {
-        grid-template-columns: 1fr;
+@media (max-width: 900px) {
+    .nav-menu ul li a {
+        font-size: 0.98rem;
+        padding: 0.4rem 0.7rem;
+    }
+    .logo-nav {
+        font-size: 1.1rem;
     }
 }
