@@ -37,8 +37,8 @@
                         <li><a href="galeria.html">Galería</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="eventos.html">Eventos</a></li>
-                        <li><a href="contacto.html">Contáctanos</a></li>
                         <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contacto.html">Contáctanos</a></li>
                         <li><a class="nav-btn-donate" href="donaciones.html">Donar</a></li>
                     </ul>
                 </nav>
@@ -55,44 +55,153 @@
         </div>
     </header>
 
-    <main class="container">
-
-        <h1>Donaciones</h1>
-        <p>Gracias por apoyar nuestro trabajo. Cada donación nos permite continuar ayudando a más personas, ejecutar proyectos y ampliar nuestras actividades comunitarias.</p>
-
-        <section>
-            <h2>¿Cómo se utilizan las donaciones?</h2>
-            <ul>
-                <li>Financiar programas educativos y comunitarios.</li>
-                <li>Comprar materiales y recursos para talleres.</li>
-                <li>Apoyar el funcionamiento administrativo básico.</li>
-                <li>Organizar eventos y actividades sociales.</li>
-            </ul>
+    <main>
+        <section class="donations-hero">
+            <div class="donations-hero__content">
+                <p class="help-eyebrow">Apoya nuestra misión</p>
+                <h1>Haz la diferencia con tu donación</h1>
+                <p class="help-lede">Gracias por apoyar nuestro trabajo. Cada donación nos permite continuar ayudando a más personas, ejecutar proyectos y ampliar nuestras actividades comunitarias.</p>
+                <div class="help-hero__actions">
+                    <a class="btn btn-primary" href="#formDonacion">Donar ahora</a>
+                    <a class="btn btn-ghost" href="contacto.html">Contactar</a>
+                </div>
+            </div>
+            <div class="donations-hero__image">
+                <img src="assets/img/volunteer.jpg" alt="Apoyo comunitario" />
+            </div>
         </section>
 
-        <section class="donation-form">
-            <h2>Realizar una donación</h2>
+        <section class="donations-impact">
+            <div class="donations-impact__header">
+                <h2>¿Cómo se utilizan las donaciones?</h2>
+                <p>Cada aporte se destina directamente a programas que transforman vidas y fortalecen nuestra comunidad.</p>
+            </div>
+            <div class="donations-impact__grid">
+                <div class="impact-item">
+                    <div class="impact-item__icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3>Programas educativos</h3>
+                    <p>Financiar programas educativos y comunitarios.</p>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-item__icon">
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+                    <h3>Materiales y recursos</h3>
+                    <p>Comprar materiales y recursos para talleres.</p>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-item__icon">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <h3>Funcionamiento</h3>
+                    <p>Apoyar el funcionamiento administrativo básico.</p>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-item__icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                    <h3>Eventos sociales</h3>
+                    <p>Organizar eventos y actividades sociales.</p>
+                </div>
+            </div>
+        </section>
 
-            <form id="formDonacion">
-                <label for="donante">Nombre completo:</label>
-                <input type="text" id="donante" name="donante" required>
+        <section class="donations-gallery">
+            <div class="donations-gallery__header">
+                <h2>¿Qué puedes donar?</h2>
+                <p>Además de donaciones monetarias, también aceptamos donaciones en especie que nos ayudan en nuestro día a día.</p>
+            </div>
+            <div class="donations-gallery__grid">
+                <div class="gallery-item" onclick="openImageModal('assets/img/que_donar.jpg')">
+                    <img src="assets/img/que_donar.jpg" alt="Donación 1" />
+                    <div class="gallery-item__overlay">
+                        <i class="fa-solid fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openImageModal('assets/img/que_donar2.jpg')">
+                    <img src="assets/img/que_donar2.jpg" alt="Donación 2" />
+                    <div class="gallery-item__overlay">
+                        <i class="fa-solid fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openImageModal('assets/img/que_donar3.jpg')">
+                    <img src="assets/img/que_donar3.jpg" alt="Donación 3" />
+                    <div class="gallery-item__overlay">
+                        <i class="fa-solid fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openImageModal('assets/img/que_donar4.jpg')">
+                    <img src="assets/img/que_donar4.jpg" alt="Donación 4" />
+                    <div class="gallery-item__overlay">
+                        <i class="fa-solid fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openImageModal('assets/img/que_donar5.jpg')">
+                    <img src="assets/img/que_donar5.jpg" alt="Donación 5" />
+                    <div class="gallery-item__overlay">
+                        <i class="fa-solid fa-expand"></i>
+                    </div>
+                </div>
+            </div>
 
-                <label for="correo">Correo electrónico:</label>
-                <input type="email" id="correo" name="correo" required>
+            <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+                <span class="image-modal__close">&times;</span>
+                <img id="modalImage" class="image-modal__content" />
+            </div>
+        </section>
 
-                <label for="monto">Monto a donar (USD):</label>
-                <input type="number" id="monto" name="monto" min="1" required>
+        <section class="donations-accounts">
+            <div class="donations-accounts__content">
+                <h2>Cuentas para transferencias</h2>
+                <p>Si prefieres hacer una transferencia bancaria directa, aquí están nuestras cuentas:</p>
+                <div class="accounts-image">
+                    <img src="assets/img/cuentas.jpg" alt="Cuentas bancarias" />
+                </div>
+            </div>
+        </section>
 
-                <label for="metodo">Método de pago:</label>
-                <select id="metodo" name="metodo" required>
-                    <option value="">Seleccione una opción</option>
-                    <option value="tarjeta">Tarjeta de Crédito/Débito</option>
-                    <option value="paypal">PayPal</option>
-                    <option value="deposito">Depósito Bancario</option>
-                </select>
+        <section class="donations-form-section" id="formDonacion">
+            <div class="donations-form-wrapper">
+                <div class="donations-form-info">
+                    <h2>Realizar una donación</h2>
+                    <p>Completa el formulario y te contactaremos para coordinar los detalles del pago. Aceptamos múltiples métodos:</p>
+                    <ul>
+                        <li><i class="fa-solid fa-building-columns"></i> Depósito bancario</li>
+                        <li><i class="fa-solid fa-credit-card"></i> Tigo Money</li>
+                        <li><i class="fa-solid fa-brands fa-paypal"></i> PayPal</li>
+                    </ul>
+                </div>
+                <form id="formDonacion" class="donations-form">
+                    <div class="form-field">
+                        <label for="donante">Nombre completo</label>
+                        <input type="text" id="donante" name="donante" required placeholder="Tu nombre">
+                    </div>
 
-                <button type="submit" class="btn-donar">Donar ahora</button>
-            </form>
+                    <div class="form-field">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" required placeholder="tucorreo@email.com">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="monto">Monto a donar (USD)</label>
+                        <input type="number" id="monto" name="monto" min="1" required placeholder="50">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="metodo">Método de pago</label>
+                        <select id="metodo" name="metodo" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="deposito">Depósito bancario</option>
+                            <option value="tigomoney">Tigo Money</option>
+                            <option value="paypal">PayPal</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">Donar ahora</button>
+                </form>
+            </div>
         </section>
 
     </main>
