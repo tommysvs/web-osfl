@@ -268,10 +268,13 @@ header {
     background-color: #fb923c !important;
     color: #ffffff !important;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    transition: all 0.3s ease !important;
 }
 
 .nav-btn-donate:hover {
     background-color: #f97316 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 8px 20px rgba(251, 146, 60, 0.2) !important;
 }
 
 .nav-toggle {
@@ -382,17 +385,20 @@ nav ul li a {
 
 /* Page banner*/
 .page-banner {
-    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 40%, #000000 100%);
+    background: radial-gradient(circle at center, rgba(15, 15, 15, 0.3) 0%, rgba(26, 26, 26, 0.5) 50%, rgba(15, 15, 15, 0.6) 100%);
     color: #f8f5ff;
-    padding: 6rem 2rem;
-    margin: 0;
+    padding: 8rem 2rem 6rem 2rem;
+    margin-top: -110px;
+    padding-top: calc(110px + 3rem);
     text-align: center;
     border-radius: 0;
-    min-height: 300px;
+    min-height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 5;
 }
 
 .page-banner h1 {
@@ -414,39 +420,39 @@ nav ul li a {
 }
 
 .page-banner--programs {
-    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.55) 40%, rgba(0, 0, 0, 0.4) 100%), url('../assets/img/banner_programs.jpg');
-    background-size: cover;
-    background-position: center;
+    background-image: radial-gradient(circle at center, rgba(15, 15, 15, 0.3) 0%, rgba(26, 26, 26, 0.5) 50%, rgba(15, 15, 15, 0.6) 100%), url('../assets/img/banner_programs.jpg');
+    background-size: cover, cover;
+    background-position: center, center;
 }
 
 .page-banner--events {
-    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.55) 40%, rgba(0, 0, 0, 0.4) 100%), url('../assets/img/banner_events.jpg');
-    background-size: cover;
-    background-position: center;
+    background-image: radial-gradient(circle at center, rgba(15, 15, 15, 0.3) 0%, rgba(26, 26, 26, 0.5) 50%, rgba(15, 15, 15, 0.6) 100%), url('../assets/img/banner_events.jpg');
+    background-size: cover, cover;
+    background-position: center, center;
 }
 
 .page-banner--contact {
-    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.55) 40%, rgba(0, 0, 0, 0.4) 100%), url('../assets/img/banner_contact.jpg');
-    background-size: cover;
-    background-position: center 40%;
+    background-image: radial-gradient(circle at center, rgba(15, 15, 15, 0.3) 0%, rgba(26, 26, 26, 0.5) 50%, rgba(15, 15, 15, 0.6) 100%), url('../assets/img/banner_contact.jpg');
+    background-size: cover, cover;
+    background-position: center, center 40%;
 }
 
 .page-banner--faq {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.55) 40%, rgba(0, 0, 0, 0.4) 100%), url('../assets/img/banner_faq.jpg');
-    background-size: cover;
-    background-position: center 60%;
+    background-image: radial-gradient(circle at center, rgba(15, 15, 15, 0.3) 0%, rgba(26, 26, 26, 0.5) 50%, rgba(15, 15, 15, 0.6) 100%), url('../assets/img/banner_faq.jpg');
+    background-size: cover, cover;
+    background-position: center, center 60%;
 }
 
 .page-banner--nosotros {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.55) 40%, rgba(0, 0, 0, 0.4) 100%), url('../assets/img/banner_aboutus.jpg');
-    background-size: cover;
-    background-position: center 60%;
+    background-image: radial-gradient(circle at center, rgba(15, 15, 15, 0.3) 0%, rgba(26, 26, 26, 0.5) 50%, rgba(15, 15, 15, 0.6) 100%), url('../assets/img/banner_aboutus.jpg');
+    background-size: cover, cover;
+    background-position: center, center 60%;
 }
 
 .page-banner--blog {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.55) 40%, rgba(0, 0, 0, 0.4) 100%), url('../assets/img/banner_blog.jpg');
-    background-size: cover;
-    background-position: center 20%;
+    background-image: radial-gradient(circle at center, rgba(15, 15, 15, 0.3) 0%, rgba(26, 26, 26, 0.5) 50%, rgba(15, 15, 15, 0.6) 100%), url('../assets/img/banner_blog.jpg');
+    background-size: cover, cover;
+    background-position: center, center 20%;
 }
 
 
@@ -2204,10 +2210,8 @@ nav ul li a {
     }
 
     .page-banner {
-        padding: 4rem 1rem;
-        margin: 3rem 1rem 1rem;
-        border-radius: 15px;
-        min-height: 250px;
+        padding-top: calc(150px + 3rem);
+        min-height: 280px;
     }
 
     .page-banner h1 {
