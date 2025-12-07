@@ -1140,3 +1140,63 @@ nav ul li a[aria-current="page"] {
         font-size: 1.1rem;
     }
 }
+
+.eventos-seccion {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.eventos-titulo {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.eventos-contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.eventos-tarjeta {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eventos-tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.eventos-imagen {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.eventos-contenido {
+  padding: 15px 20px;
+}
+
+.eventos-fecha {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.eventos-nombre {
+  font-size: 18px;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+
+
+.eventos-boton:hover {
+  background-color: #005fa3;
+}
