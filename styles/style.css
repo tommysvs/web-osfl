@@ -648,6 +648,105 @@ nav ul li a[aria-current="page"] {
     line-height: 1.6;
 }
 
+/* Events page */
+.eventos-seccion {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.eventos-titulo {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.eventos-contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.eventos-tarjeta {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eventos-tarjeta:hover {
+  transform: translateY(-5px);
+}
+
+.eventos-imagen {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.eventos-contenido {
+  padding: 15px 20px;
+}
+
+.eventos-fecha {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.eventos-fecha i {
+  color: #6d28d9;
+  margin-right: 0.6rem;
+  font-size: 1rem;
+}
+
+.eventos-nombre {
+  font-size: 18px;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.eventos-badge {
+  display: inline-block;
+  background-color: #fb923c;
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+.eventos-badge--pasado {
+  background-color: #a78bfa;
+  border-color: rgba(167, 139, 250, 0.3);
+}
+
+.eventos-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.eventos-subtitulo {
+  color: #2c2c2c;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+  background: linear-gradient(135deg, rgba(109, 40, 217, 0.2) 0%, rgba(124, 58, 237, 0.1) 50%, rgba(245, 158, 11, 0.2) 100%);
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.eventos-boton:hover {
+  background-color: #005fa3;
+}
+
 /* Page banner*/
 .page-banner {
     background: linear-gradient(135deg, #6d28d9 0%, #7c3aed 40%, #4c1d95 100%);
@@ -791,7 +890,6 @@ nav ul li a[aria-current="page"] {
 }
 
 /* Footer */
-
 .site-footer {
     background: linear-gradient(135deg, #6d28d9 0%, #7c3aed 40%, #4c1d95 100%);
     color: #f8f5ff;
@@ -913,7 +1011,6 @@ nav ul li a[aria-current="page"] {
 }
 
 /* Responsive */
-
 @media (max-width: 768px) {
     body {
         padding-top: 70px;
@@ -1139,64 +1236,4 @@ nav ul li a[aria-current="page"] {
     .logo-nav {
         font-size: 1.1rem;
     }
-}
-
-.eventos-seccion {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  font-family: Arial, sans-serif;
-}
-
-.eventos-titulo {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #333;
-}
-
-.eventos-contenedor {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.eventos-tarjeta {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.eventos-tarjeta:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-.eventos-imagen {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.eventos-contenido {
-  padding: 15px 20px;
-}
-
-.eventos-fecha {
-  font-size: 14px;
-  color: #888;
-  margin-bottom: 10px;
-}
-
-.eventos-nombre {
-  font-size: 18px;
-  color: #222;
-  margin-bottom: 15px;
-}
-
-
-
-.eventos-boton:hover {
-  background-color: #005fa3;
 }
