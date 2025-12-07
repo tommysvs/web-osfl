@@ -104,3 +104,29 @@ function moveToLeft() {
     slider.style.transform = `translate(-${operacion}%)`;
     slider.style.transition = "all ease .6s";
 }
+
+// FAQ ACCORDION
+document.addEventListener('DOMContentLoaded', () => {
+    const questions = document.querySelectorAll('.faq-question');
+    
+    function toggleAnswer(button) {
+        const answer = button.nextElementSibling;
+        const isActive = button.getAttribute('aria-expanded') === 'true';
+
+        if (!isActive) {
+            button.setAttribute('aria-expanded', 'true');
+            answer.classList.add('open');
+            answer.style.maxHeight = answer.scrollHeight + 32 + 'px'; 
+        } else {
+            button.setAttribute('aria-expanded', 'false');
+            answer.classList.remove('open');
+            answer.style.maxHeight = '0';
+        }
+    }
+
+    questions.forEach(button => {
+        button.addEventListener('click', () => {
+            toggleAnswer(button);
+        });
+    });
+});
