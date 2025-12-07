@@ -1541,30 +1541,52 @@ nav ul li a {
 
 /* Footer */
 .site-footer {
-    background: linear-gradient(135deg, #6d28d9 0%, #7c3aed 40%, #4c1d95 100%);
-    color: #f8f5ff;
-    padding: 2.5rem 1rem 1.5rem;
+    background-image: url('../assets/img/animal_pattern.jpg');
+    background-repeat: repeat;
+    background-size: auto;
+    background-attachment: fixed;
+    color: #e0d7ff;
+    padding: 3.5rem 2rem 1.5rem;
     margin-top: 4rem;
+    border-top: 3px solid var(--orange);
+    position: relative;
+    z-index: 1;
+}
+
+.site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(90, 46, 127, 0.95), rgba(76, 29, 149, 0.95), rgba(90, 46, 127, 0.95));
+    pointer-events: none;
+    z-index: -1;
 }
 
 .site-footer a {
-    color: #f8f5ff;
+    color: #e0d7ff;
     text-decoration: none;
-    transition: opacity 0.2s ease;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .site-footer a:hover {
-    opacity: 0.85;
+    color: var(--orange);
 }
 
 .footer-inner {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 2.5rem;
     align-items: flex-start;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 .footer-brand {
@@ -1575,30 +1597,35 @@ nav ul li a {
 }
 
 .footer-brand p {
-    margin: 0.5rem 0 0;
-    color: #e9ddff;
-    line-height: 1.5;
+    margin: 0.75rem 0 0;
+    color: #d4c5f9;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    font-weight: 500;
 }
 
 .footer-logo {
-    height: 140px;
+    height: 120px;
     width: auto;
     object-fit: contain;
 }
 
 .footer-volunteer h3,
 .footer-contact h3 {
-    margin: 0 0 0.75rem;
-    font-size: 1.05rem;
-    color: #fefefe;
+    margin: 0 0 1.25rem;
+    font-size: 1rem;
+    color: #ffffff;
     text-align: left;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .footer-volunteer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.75rem;
+    gap: 1rem;
 }
 
 .footer-contact ul {
@@ -1609,40 +1636,74 @@ nav ul li a {
 }
 
 .footer-contact li {
-    margin-bottom: 0.35rem;
-    color: #e9ddff;
+    margin-bottom: 0.7rem;
+    color: #d4c5f9;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-contact li a {
+    color: #d4c5f9;
+}
+
+.footer-contact li a:hover {
+    color: var(--orange);
 }
 
 .footer-social {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 0.75rem;
     margin-bottom: 2rem;
 }
 
 .footer-social a {
-    border: 1px solid rgba(255,255,255,0.35);
-    padding: 0.35rem 0.7rem;
-    border-radius: 999px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #e0d7ff;
+    border-radius: 50%;
     font-weight: 600;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    color: #e0d7ff;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: #ffffff;
+    transform: translateY(-3px);
 }
 
 .footer-btn {
-    background: #ffffff;
-    color: #6d28d9;
-    border: 1px solid #e0d7ff;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #e0d7ff;
     font-weight: 600;
-    padding: 0.6rem 1rem;
-    border-radius: 10px;
+    padding: 0.7rem 1.4rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.footer-btn:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: #ffffff;
 }
 
 .footer-btn.ghost {
     background: transparent;
-    color: #f8f5ff;
-    border: 1px solid rgba(255,255,255,0.4);
+    color: #e0d7ff;
+    border: 2px solid #e0d7ff;
+}
+
+.footer-btn.ghost:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: #ffffff;
 }
 
 .footer-bottom {
@@ -1650,14 +1711,18 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2rem;
-    font-size: 0.95rem;
-    color: #e9ddff;
-    max-width: 1200px;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.85rem;
+    color: #b8a9d6;
+    max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 1rem;
+    padding: 2rem 2rem 0;
+    position: relative;
+    z-index: 1;
 }
 
 
