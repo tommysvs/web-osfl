@@ -3,27 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de Nosotros | Callejeros con Futuro</title>
-    <meta name="description" content="Información sobre la organización, su historia y su equipo.">
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Acerca de nosotros | Callejeros con Futuro HN</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-
+    <div class="loader" id="page-loader" aria-live="polite" aria-label="Cargando sitio">
+        <div class="loader-inner">
+            <span class="loader-paw" aria-hidden="true"></span>
+        </div>
+    </div>
+    
     <header>
-        <h1>Callejeros con Futuro</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html" class="active">Acerca de Nosotros</a></li>
-                <li><a href="programas.html">Programas</a></li>
-                <li><a href="contacto.html">Contáctenos</a></li>
-            </ul>
-        </nav>
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="logo-nav">
+                    <img src="assets/img/logo.jpg" alt="Callejeros con Futuro HN" class="logo-img">
+                </a>
+            </div>
+
+            <div class="nav-center">
+                <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+                    <span class="nav-hamburger"></span>
+                </button>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="nosotros.html" aria-current="page">Nosotros</a></li>
+                        <li><a href="programas.html">Programas</a></li>
+                        <li><a href="ayudar.html">Cómo ayudar</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="eventos.html">Eventos</a></li>
+                        <li><a href="contacto.html">Contáctanos</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a class="nav-btn-donate" href="donaciones.html">Donar</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="nav-right">
+                <div class="nav-actions">
+                    <div class="nav-social">
+                        <a href="https://www.facebook.com/callejerosconfuturohn" aria-label="Facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/ocafuhn/" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
-
-       
         <section id="intro">
             <h2>Quiénes Somos</h2>
             <p>
@@ -120,9 +150,39 @@
 
     </main>
 
-    <footer>
-        <p>© 2025 Callejeros con Futuro. Todos los derechos reservados.</p>
-    </footer>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="index.html" class="logo-nav">
+                    <img src="assets/img/logo.jpg" alt="Callejeros con Futuro HN" class="footer-logo" />
+                </a>
+                <p>Callejeros con Futuro</p>
+            </div>
 
+            <div class="footer-volunteer">
+                <h3>Involúcrate</h3>
+                <a class="btn footer-btn ghost" href="ayudar.html">Ser voluntario</a>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><a href="tel:+50495750840">+504 9575 0840</a></li>
+                    <li><a href="mailto:hncallejerosconfuturo@gmail.com">hncallejerosconfuturo@gmail.com</a></li>
+                    <li>Bo. San Francisco, Las Vegas, Santa Bárbara</li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://www.facebook.com/callejerosconfuturohn" aria-label="Facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/ocafuhn/" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2025 Callejeros con Futuro HN. Todos los derechos reservados.</span>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
