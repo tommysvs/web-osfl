@@ -25,10 +25,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle at 20% 20%, rgba(109, 40, 217, 0.08), transparent 35%),
-                radial-gradient(circle at 80% 30%, rgba(251, 146, 60, 0.12), transparent 35%),
-                radial-gradient(circle at 50% 70%, rgba(76, 29, 149, 0.08), transparent 40%),
-                #f0f0ea;
+    background: rgba(240, 240, 234, 0.5);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
     z-index: 9999;
     transition: opacity 0.4s ease, visibility 0.4s ease;
 }
@@ -43,57 +42,71 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
-    padding: 1.75rem 2rem;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 18px;
-    border: 1px solid rgba(109, 40, 217, 0.15);
+    gap: 1.5rem;
 }
 
 .loader-paw {
-    display: block;
-    width: 40px;
-    height: 40px;
-    font-size: 2rem;
-    color: #6d28d9;
-    animation: paw-walk 1s infinite ease-in-out;
+    position: relative;
+    width: 60px;
+    height: 60px;
 }
 
 .loader-paw::before {
     content: "\f1b0";
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #6d28d9 0%, #fb923c 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: paw-pulse 1s ease-in-out infinite;
 }
 
-.loader-paw:nth-child(2) {
-    color: #fb923c;
-    animation-delay: 0.12s;
+.loader-paw::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    border-top-color: #6d28d9;
+    border-right-color: #fb923c;
+    border-radius: 50%;
+    animation: spinner-rotate 1s linear infinite;
 }
 
+.loader-paw:nth-child(2),
 .loader-paw:nth-child(3) {
-    color: #4d3b80;
-    animation-delay: 0.24s;
+    display: none;
 }
 
 .loader-inner p {
-    margin: 0.25rem 0 0;
-    color: #4d3b80;
-    font-weight: 600;
-    letter-spacing: 0.02em;
+    display: none;
 }
 
-@keyframes paw-walk {
-    0% {
-        transform: translateY(4px) scale(0.9);
-        opacity: 0.45;
+@keyframes paw-pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(0.6);
+        opacity: 0.7;
     }
     50% {
-        transform: translateY(-8px) scale(1);
+        transform: translate(-50%, -50%) scale(0.8);
         opacity: 1;
     }
+}
+
+@keyframes spinner-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
     100% {
-        transform: translateY(4px) scale(0.9);
-        opacity: 0.45;
+        transform: rotate(360deg);
     }
 }
 
@@ -393,6 +406,58 @@ nav ul li a[aria-current="page"] {
     gap: 0.5rem;
     color: #3b3355;
     font-weight: 600;
+}
+
+/* Page banner*/
+.page-banner {
+    background: linear-gradient(135deg, #6d28d9 0%, #7c3aed 40%, #4c1d95 100%);
+    color: #f8f5ff;
+    padding: 6rem 2rem;
+    margin: 2rem auto 3rem;
+    max-width: 1200px;
+    text-align: center;
+    border-radius: 15px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-banner h1 {
+    color: #ffffff;
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+    font-weight: 700;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.page-banner p {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin: 0;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 3px 12px rgba(0, 0, 0, 0.4);
+}
+
+.page-banner--programs {
+    background-image: linear-gradient(135deg, rgba(109, 40, 217, 0.1) 0%, rgba(124, 58, 237, 0.40) 40%, rgba(76, 29, 149, 0.1) 100%), url('../assets/img/banner_programs.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.page-banner--events {
+    background-image: linear-gradient(135deg, rgba(109, 40, 217, 0.1) 0%, rgba(124, 58, 237, 0.40) 40%, rgba(76, 29, 149, 0.1) 100%), url('../assets/img/banner_events.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.page-banner--contact {
+    background-image: linear-gradient(135deg, rgba(109, 40, 217, 0.1) 0%, rgba(124, 58, 237, 0.40) 40%, rgba(76, 29, 149, 0.1) 100%), url('../assets/img/banner_contact.jpg');
+    background-size: cover;
+    background-position: center 40%;
 }
 
 /* Programs page */
@@ -836,58 +901,6 @@ nav ul li a[aria-current="page"] {
 
 .eventos-boton:hover {
   background-color: #005fa3;
-}
-
-/* Page banner*/
-.page-banner {
-    background: linear-gradient(135deg, #6d28d9 0%, #7c3aed 40%, #4c1d95 100%);
-    color: #f8f5ff;
-    padding: 6rem 2rem;
-    margin: 2rem auto 3rem;
-    max-width: 1200px;
-    text-align: center;
-    border-radius: 15px;
-    min-height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.page-banner h1 {
-    color: #ffffff;
-    font-size: 3rem;
-    margin: 0 0 1rem 0;
-    font-weight: 700;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.2);
-}
-
-.page-banner p {
-    color: #ffffff;
-    font-size: 1.1rem;
-    margin: 0;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 3px 12px rgba(0, 0, 0, 0.4);
-}
-
-.page-banner--programs {
-    background-image: linear-gradient(135deg, rgba(109, 40, 217, 0.1) 0%, rgba(124, 58, 237, 0.40) 40%, rgba(76, 29, 149, 0.1) 100%), url('../assets/img/banner_programs.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.page-banner--events {
-    background-image: linear-gradient(135deg, rgba(109, 40, 217, 0.1) 0%, rgba(124, 58, 237, 0.40) 40%, rgba(76, 29, 149, 0.1) 100%), url('../assets/img/banner_events.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.page-banner--contact {
-    background-image: linear-gradient(135deg, rgba(109, 40, 217, 0.1) 0%, rgba(124, 58, 237, 0.40) 40%, rgba(76, 29, 149, 0.1) 100%), url('../assets/img/banner_contact.jpg');
-    background-size: cover;
-    background-position: center 40%;
 }
 
 /* Contact page */
