@@ -321,7 +321,7 @@ nav ul li a[aria-current="page"] {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--orange), #f97316);
+    background: linear-gradient(135deg, #6d28d9, #7c3aed);
     color: #fff !important;
 }
 
@@ -393,6 +393,97 @@ nav ul li a[aria-current="page"] {
     gap: 0.5rem;
     color: #3b3355;
     font-weight: 600;
+}
+
+/* Programs page */
+.programas-intro {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    text-align: center;
+    font-size: 1.05rem;
+    color: #4b5563;
+    line-height: 1.8;
+}
+
+.programas-timeline {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.programas-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, #e5e7eb 0%, #6d28d9 50%, #e5e7eb 100%);
+}
+
+.timeline-item {
+    margin-bottom: 3rem;
+    display: flex;
+    gap: 2rem;
+    position: relative;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-number {
+    flex: 0 0 100px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #6d28d9;
+    line-height: 1;
+}
+
+.timeline-content {
+    flex: 1;
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-left: 4px solid #fb923c;
+    position: relative;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    border-left: none;
+    border-right: 4px solid #fb923c;
+}
+
+.timeline-content h3 {
+    color: #1f2937;
+    font-size: 1.2rem;
+    margin: 0 0 0.8rem 0;
+    font-weight: 700;
+}
+
+.timeline-content p {
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2rem;
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
+    border: 3px solid #6d28d9;
+    border-radius: 50%;
+    z-index: 1;
 }
 
 /* Help page */
@@ -1225,6 +1316,112 @@ nav ul li a[aria-current="page"] {
     .help-cta__actions {
         justify-content: flex-start;
         margin-top: 1rem;
+    }
+}
+
+/* CTA Section */
+.programs-cta {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, rgba(109, 40, 217, 0.12), rgba(251, 146, 60, 0.12)), #ffffff;
+    border-radius: 24px;
+    border: 1px solid rgba(109, 40, 217, 0.2);
+    color: #1f2937;
+}
+
+.cta-content {
+    text-align: center;
+}
+
+.cta-content h2 {
+    color: var(--purple-dark);
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+    font-weight: 700;
+}
+
+.cta-content p {
+    color: #5a4c78;
+    font-size: 1.1rem;
+    margin: 0 0 2rem 0;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* CTA Buttons */
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: #6d28d9;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #7c3aed;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #fb923c;
+    color: #ffffff;
+    border-color: #fb923c;
+}
+
+.btn-secondary:hover {
+    background-color: #f97316;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .programas-timeline::before {
+        left: 15px;
+    }
+
+    .timeline-item {
+        flex-direction: column !important;
+        gap: 1rem;
+    }
+
+    .timeline-number {
+        text-align: left;
+        font-size: 1.8rem;
+    }
+
+    .timeline-content {
+        border-left: 4px solid #fb923c !important;
+        border-right: none !important;
+    }
+
+    .timeline-item::after {
+        left: 15px;
+    }
+
+    .cta-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-buttons {
+        gap: 0.8rem;
+    }
+
+    .btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
     }
 }
 

@@ -3,123 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programas | Callejeros con Futuro</title>
-    <meta name="description" content="Programas y proyectos que desarrolla la organización.">
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Programas - Callejeros con Futuro HN</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-
+    <div class="loader" id="page-loader" aria-live="polite" aria-label="Cargando sitio">
+      <div class="loader-inner">
+          <span class="loader-paw" aria-hidden="true"></span>
+          <span class="loader-paw" aria-hidden="true"></span>
+          <span class="loader-paw" aria-hidden="true"></span>
+          <p>Cuidando patitas...</p>
+      </div>
+    </div>
+    
     <header>
-        <h1>Callejeros con Futuro</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Acerca de Nosotros</a></li>
-                <li><a href="programas.html" class="active">Programas</a></li>
-                <li><a href="contacto.html">Contáctenos</a></li>
-            </ul>
-        </nav>
+        <div class="nav-container">
+
+            <div class="nav-left">
+                <a href="index.html" class="logo-nav">
+                    <img src="assets/img/logo.jpg" alt="Callejeros con Futuro HN" class="logo-img">
+                </a>
+            </div>
+
+            <div class="nav-center">
+                <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+                    <span class="nav-hamburger"></span>
+                </button>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="index.html" aria-current="page">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="programas.html">Programas</a></li>
+                        <li><a href="ayudar.html">Cómo ayudar</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="eventos.html">Eventos</a></li>
+                        <li><a href="contacto.html">Contáctenos</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a class="nav-btn-donate" href="donaciones.html">Donar</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="nav-right">
+                <div class="nav-actions">
+                    <div class="nav-social">
+                        <a href="https://www.facebook.com/callejerosconfuturohn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/ocafuhn/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
+        <div class="page-banner">
+            <h1>Nuestros Programas</h1>
+            <p>Iniciativas orientadas a la recuperación, protección y bienestar de animales rescatados</p>
+        </div>
 
-        <!-- INTRO -->
-        <section id="intro-programas">
-            <h2>Nuestros Programas</h2>
-            <p>
-                Callejeros con Futuro desarrolla programas orientados a la recuperación, protección y bienestar
-                de animales rescatados, promoviendo la responsabilidad, la educación y la reducción de la
-                sobrepoblación mediante acciones comunitarias y veterinarias.
-            </p>
+        <section class="programas-intro">
+            <p>En Callejeros con Futuro desarrollamos un conjunto de iniciativas integradas que trabajan en sinergia para lograr un impacto real en la vida de los animales rescatados y en la comunidad.</p>
         </section>
 
-        <!-- PROGRAMA 1 -->
-        <section class="programa">
-            <article>
-                <h3>Programa de Apadrinamiento Médico</h3>
-                <p>
-                    Este programa brinda apoyo veterinario a animales callejeros que han sido rescatados por terceros.
-                    Incluye consultas, medicinas, tratamientos, cirugías, vacunas, desparasitación y cuidados de recuperación.
-                    Está dirigido a perros y gatos en situación de vulnerabilidad que requieren atención médica para sanar
-                    y recuperar su bienestar.
-                </p>
-                <img src="img/programa1.jpg" alt="Programa de Apadrinamiento Médico">
-            </article>
-        </section>
+        <div class="programas-timeline">
+            <div class="timeline-item">
+                <div class="timeline-number">01</div>
+                <div class="timeline-content">
+                    <h3>Rescate y Evaluación</h3>
+                    <p>Identificamos casos de animales en riesgo y realizamos evaluaciones integrales de su estado de salud y bienestar.</p>
+                </div>
+            </div>
 
-        <!-- PROGRAMA 2 -->
-        <section class="programa">
-            <article>
-                <h3>Campañas de Esterilización y Castración</h3>
-                <p>
-                    Se organizan campañas a bajo costo junto a clínicas veterinarias aliadas para reducir la sobrepoblación
-                    animal y prevenir enfermedades. Entre las campañas realizadas están:
-                </p>
-                <ul>
-                    <li>
-                        <strong>Esterilizaciones y castraciones caninas:</strong>
-                        Requisitos: desparasitado, sano, de 6 meses a 8 años, no estar en celo y depósito del 50%.  
-                        Cupos limitados a 4 por día.  
-                        Fechas anunciadas según disponibilidad.
-                    </li>
-                    <li>
-                        <strong>Jornadas de esterilización felina:</strong>
-                        Para gatos entre 6 meses y 6 años. Ayuno total desde las 10 pm, llevar transportador y cobija.  
-                        Requiere depósito previo.
-                    </li>
-                </ul>
-                <img src="img/programa2.jpg" alt="Campañas de Esterilización y Castración">
-            </article>
-        </section>
+            <div class="timeline-item">
+                <div class="timeline-number">02</div>
+                <div class="timeline-content">
+                    <h3>Atención Veterinaria</h3>
+                    <p>Proporcionamos cuidados médicos profesionales: consultas, medicinas, tratamientos especializados, cirugías y recuperación.</p>
+                </div>
+            </div>
 
-        <!-- PROGRAMA 3 -->
-        <section class="programa">
-            <article>
-                <h3>Educación y Conciencia Social</h3>
-                <p>
-                    Se desarrollan actividades educativas, contenido en redes sociales y charlas comunitarias para promover
-                    el respeto, la responsabilidad y el cumplimiento de leyes de protección animal. Las campañas también
-                    fomentan la tenencia responsable y la importancia de brindar una vida digna a las mascotas.
-                </p>
-                <img src="img/programa3.jpg" alt="Programa de Educación y Conciencia Social">
-            </article>
-        </section>
+            <div class="timeline-item">
+                <div class="timeline-number">03</div>
+                <div class="timeline-content">
+                    <h3>Salud Preventiva</h3>
+                    <p>Campañas de esterilización y castración a bajo costo para reducir sobrepoblación y prevenir enfermedades.</p>
+                </div>
+            </div>
 
-        
-        <section class="programa">
-            <article>
-                <h3>Red de Apoyo y Voluntariado</h3>
-                <p>
-                    La organización cuenta con una red de voluntarios que colabora en actividades como selección de casos,
-                    campañas de recaudación, rifas, ventas solidarias, diseño de contenido, logística y eventos.  
-                    Los voluntarios ayudan a promover la misión de la organización y a fortalecer el impacto comunitario.
-                </p>
-                <p>
-                    También colaboran empresas aliadas y patrocinadores mediante aportes económicos directos,
-                    donaciones para rifas, apoyo en eventos y actividades benéficas.
-                </p>
-                <img src="img/programa4.jpg" alt="Programa de Voluntariado y Red de Apoyo">
-            </article>
-        </section>
+            <div class="timeline-item">
+                <div class="timeline-number">04</div>
+                <div class="timeline-content">
+                    <h3>Educación Comunitaria</h3>
+                    <p>Promovemos conciencia sobre tenencia responsable, derechos animales y leyes de protección en la comunidad.</p>
+                </div>
+            </div>
 
-        
-        <section class="programa">
-            <article>
-                <h3>Recaudación de Fondos Solidaria</h3>
-                <p>
-                    Se realizan eventos mensuales, rifas, ventas benéficas, noches culturales, actividades pro-fondos
-                    y alianzas con empresas que contribuyen económicamente para cubrir la atención médica veterinaria
-                    de los animales apadrinados.
-                </p>
-                <img src="img/programa5.jpg" alt="Programa de Recaudación de Fondos">
-            </article>
+            <div class="timeline-item">
+                <div class="timeline-number">05</div>
+                <div class="timeline-content">
+                    <h3>Voluntariado y Alianzas</h3>
+                    <p>Contamos con una red activa de voluntarios y empresas que colaboran en logística, eventos y recaudación.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-number">06</div>
+                <div class="timeline-content">
+                    <h3>Sostenibilidad</h3>
+                    <p>Eventos mensuales, rifas y actividades benéficas que generan fondos para mantener y expandir nuestros programas.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="programs-cta">
+            <div class="cta-content">
+                <h2>Sé parte de esta misión</h2>
+                <p>Cada acción cuenta. Ya sea como voluntario, donante o simplemente compartiendo nuestra visión.</p>
+                <div class="cta-buttons">
+                    <a href="ayudar.html" class="btn btn-secondary">Cómo ayudar</a>
+                    <a href="donaciones.html" class="btn btn-ghost">Donar ahora</a>
+                </div>
+            </div>
         </section>
 
     </main>
 
-    <footer>
-        <p>© 2025 Callejeros con Futuro. Todos los derechos reservados.</p>
-    </footer>
+    <footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <a href="index.html" class="logo-nav">
+                <img src="assets/img/logo.jpg" alt="Callejeros con Futuro HN" class="footer-logo" />
+            </a>
+            <p>Callejeros con Futuro</p>
+        </div>
 
+        <div class="footer-volunteer">
+            <h3>Involúcrate</h3>
+            <a class="btn footer-btn ghost" href="ayudar.html">Ser voluntario</a>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contacto</h3>
+            <ul>
+                <li><a href="tel:+50495750840">+504 9575 0840</a></li>
+                <li><a href="mailto:hncallejerosconfuturo@gmail.com">hncallejerosconfuturo@gmail.com</a></li>
+                <li>Bo. San Francisco, Las Vegas, Santa Bárbara</li>
+            </ul>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.facebook.com/callejerosconfuturohn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/ocafuhn/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+          <span>© 2025 Callejeros con Futuro HN. Todos los derechos reservados.</span>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
