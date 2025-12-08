@@ -1,16 +1,6 @@
-const btnLeft = document.querySelector(".btn-left"),
-      btnRight = document.querySelector(".btn-right"),
-      slider = document.querySelector("#slider"),
-      sliderSection = document.querySelectorAll(".slider-section"),
-      navToggle = document.querySelector(".nav-toggle"),
+const navToggle = document.querySelector(".nav-toggle"),
       navMenu = document.querySelector(".nav-menu"),
       pageLoader = document.getElementById("page-loader");
-
-let operacion = 0,
-    counter = 0,
-    widthImg = sliderSection.length > 0 ? 100 / sliderSection.length : 0;
-
-let intervalo;
 
 // LOADER
 if (pageLoader) {
@@ -43,66 +33,87 @@ if (navMenu) {
     });
 }
 
-// SLIDER 
-function iniciarIntervalo() {
-    if (slider && sliderSection.length > 0) {
-        intervalo = setInterval(() => {
-            moveToRight();
-        }, 3000);
+// GALLERY CAROUSEL
+document.addEventListener("DOMContentLoaded", () => {
+    const carouselContainer = document.querySelector(".carousel-container");
+    if (carouselContainer) {
+        let carouselPrincipal = new Carousel(carouselContainer);
+        carouselPrincipal.init();
     }
-}
+});
 
-function reiniciarIntervalo() {
-    clearInterval(intervalo);
-    iniciarIntervalo();
-}
-
-if (btnLeft) {
-    btnLeft.addEventListener("click", e => {
-        moveToLeft();
-        reiniciarIntervalo();
-    });
-}
-
-if (btnRight) {
-    btnRight.addEventListener("click", e => {
-        moveToRight();
-        reiniciarIntervalo();
-    });
-}
-
-iniciarIntervalo();
-
-function moveToRight() {
-    if (!slider || sliderSection.length === 0) return;
+class Carousel {
+    contenedor = null;
+    track = null;
+    items = [];
     
-    if (counter >= sliderSection.length - 1) {
-        counter = 0;
-        operacion = 0;
-        slider.style.transform = `translate(-${operacion}%)`;
-        slider.style.transition = "none";
-        return;
-    } 
-    counter++;
-    operacion = operacion + widthImg;
-    slider.style.transform = `translate(-${operacion}%)`;
-    slider.style.transition = "all ease .6s";
-}
-
-function moveToLeft() {
-    if (!slider || sliderSection.length === 0) return;
+    direction = 1;
+    timeInSeconds = 3;
+    timerId = null;
+    currentItem = 0;
     
-    counter--;
-    if (counter < 0) {
-        counter = sliderSection.length - 1;
-        operacion = widthImg * (sliderSection.length - 1);
-        slider.style.transform = `translate(-${operacion}%)`;
-        slider.style.transition = "none";
-        return;
-    } 
-    operacion = operacion - widthImg;
-    slider.style.transform = `translate(-${operacion}%)`;
-    slider.style.transition = "all ease .6s";
+    rightButton = null;
+    leftButton = null;
+    
+    constructor(contenedor) {
+        this.contenedor = contenedor;
+        this.track = this.contenedor.querySelector(".carousel-track");
+        this.items = [...this.track.querySelectorAll(".carousel-item")];
+    }
+    
+    init() {
+        console.log("Carousel Inicializado");
+        console.log("items:", this.items);
+        this.generateUX();
+        this.tick();
+    }
+    
+    generateUX() {
+        this.rightButton = document.createElement("button");
+        this.leftButton = document.createElement("button");
+        this.rightButton.classList.add("carousel_right");
+        this.leftButton.classList.add("carousel_left");
+        this.rightButton.innerHTML = ">";
+        this.leftButton.innerHTML = "<";
+        
+        this.rightButton.addEventListener("click", (e) => {
+            this.moveToDirection(1);
+        });
+        
+        this.leftButton.addEventListener("click", (e) => {
+            this.moveToDirection(-1);
+        });
+        
+        this.contenedor.appendChild(this.rightButton);
+        this.contenedor.appendChild(this.leftButton);
+    }
+    
+    moveToDirection(nextDirection) {
+        clearTimeout(this.timerId);
+        this.direction = nextDirection;
+        this.moveToNext();
+        this.tick();
+    }
+    
+    tick() {
+        this.timerId = setTimeout(
+            () => {
+                this.moveToNext();
+                this.tick();
+            },
+            this.timeInSeconds * 1000
+        );
+    }
+    
+    moveToNext() {
+        let nextIndex = (this.currentItem + this.direction + this.items.length) % this.items.length;
+        this.currentItem = nextIndex;
+        this.moveTo(nextIndex);
+    }
+    
+    moveTo(index) {
+        this.track.style.transform = `translateX(-${index * 100}%)`;
+    }
 }
 
 // FAQ ACCORDION
@@ -131,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// IMAGE MODAL FOR GALLERY
+// DONATION PAGE IMAGE MODAL
 function openImageModal(imageSrc) {
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImage');
