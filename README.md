@@ -1,15 +1,13 @@
-# Callejeros con Futuro HN
+# Callejeros con Futuro
 
-Sitio web estático para la organización sin fines de lucro **Callejeros con Futuro HN**. Incluye páginas de presentación, programas, cómo ayudar, contacto y blog, con navegación responsiva, animación de carga y formulario de contacto.
+Sitio web estático y responsivo para **Callejeros con Futuro**, enfocado en apadrinar atención médica veterinaria para animales rescatados en Honduras. Incluye páginas de presentación, programas, voluntariado, galería, donaciones, blog, eventos, FAQ y contacto.
 
-## Características
-- Navegación fija con menú hamburguesa y animación de despliegue vertical en móvil.
-- Loader inicial con animación de huellas.
-- Páginas clave: Inicio, Nosotros, Programas, Cómo ayudar, Galería, Blog, Eventos, Contacto, FAQ y Donaciones.
-- Página "Cómo ayudar" con hero informativo, tarjetas de formas de apoyo, programas y formulario de voluntariado.
-- Página de contacto con banner, formulario y datos de contacto.
-- Diseño responsivo y tipografía sans serif; íconos con Font Awesome 6.5.
-- Paleta de color: púrpura (`#6d28d9`, `#4c1d95`), naranja (`#fb923c`, `#f97316`), fondo claro (`#f0f0ea`).
+## Características principales
+- Navegación fija con menú hamburguesa accesible, estado `aria-expanded` y enlaces a todas las secciones.
+- Loader inicial animado que se oculta tras la carga para mejorar la percepción de rendimiento.
+- Componentes interactivos: carrusel automático con controles en `galeria.html`, acordeón de preguntas frecuentes en `faq.html`, modal de imágenes en `donaciones.html` y formularios de contacto/donación.
+- Diseño responsivo con paleta púrpura/naranja, textura de fondo y tipografía sans serif; íconos vía CDN de Font Awesome 6.5 (y Boxicons en galería).
+- Secciones de impacto: métricas destacadas, CTA de donación, testimonios/eventos y llamados a voluntariado.
 
 ## Estructura del proyecto
 ```
@@ -29,11 +27,10 @@ Sitio web estático para la organización sin fines de lucro **Callejeros con Fu
 ├─ js/
 │  └─ script.js
 └─ assets/
-   └─ img/   (logotipos e imágenes varias)
+   └─ img/
 ```
 
-## Desarrollo
-- Estilos globales en `styles/style.css`.
-- Interacciones (loader y menú móvil) en `js/script.js`.
-- Ajustes responsivos bajo los media queries (768px y 900px).
-- Íconos: CDN de Font Awesome 6.5.0.
+## Tecnologías y dependencias
+- HTML5 + CSS3 + JavaScript vanilla.
+- Font Awesome 6.5 (CDN) y Boxicons 2.1.4 (galería).
+- No requiere Node, npm ni bundler; basta un servidor estático o abrir el `index.html` en el navegador.
