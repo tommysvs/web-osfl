@@ -948,10 +948,10 @@ nav ul li a {
 }
 
 #historia article {
-    background: linear-gradient(135deg, rgba(109, 40, 217, 0.05), rgba(251, 146, 60, 0.03));
+    background: linear-gradient(135deg, rgba(251, 146, 60, 0.14), rgba(251, 146, 60, 0.06));
     padding: 2rem;
     border-radius: 14px;
-    border-left: 4px solid var(--purple);
+    border-left: 4px solid var(--orange);
 }
 
 #historia article p {
@@ -965,7 +965,6 @@ nav ul li a {
 }
 
 #mision-vision {
-    background: linear-gradient(135deg, rgba(109, 40, 217, 0.03), rgba(251, 146, 60, 0.02));
     padding: 3.5rem 1.5rem;
     margin: 3rem 0;
     display: grid;
@@ -1034,6 +1033,67 @@ nav ul li a {
     font-size: 1rem;
     margin: 0;
 }
+
+.about-values {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+}
+
+.about-values h2 {
+    margin: 0.35rem 0 1rem;
+    color: var(--purple-dark);
+    text-align: center;
+    font-size: 2rem;
+}
+
+.about-values__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 1.25rem;
+    justify-items: center;
+    justify-content: center;
+}
+
+.about-value {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: center;
+    background: #fff;
+    border: 1px solid rgba(109, 40, 217, 0.08);
+    border-radius: 14px;
+    padding: 1rem 1.25rem;
+    width: 100%;
+    max-width: 420px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-value:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 26px rgba(44, 35, 74, 0.09);
+}
+
+.about-value h3 {
+    margin: 0 0 0.35rem;
+    color: var(--purple-dark);
+}
+
+.about-value__badge {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--orange);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.05rem;
+    flex-shrink: 0;
+}
+
 
 #equipo {
     max-width: 1200px;
@@ -1274,48 +1334,6 @@ nav ul li a {
     font-size: 1.2rem;
 }
 
-.help-steps {
-    max-width: 1100px;
-    margin: 2.5rem auto;
-    padding: 0 1.5rem;
-}
-
-.help-steps__header h2 {
-    margin: 0.35rem 0;
-    color: var(--purple-dark);
-}
-
-.help-steps__list {
-    display: grid;
-    gap: 1rem;
-    margin-top: 1.25rem;
-}
-
-.help-step {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 1rem;
-    align-items: center;
-    background: #fff;
-    border: 1px solid rgba(109, 40, 217, 0.08);
-    border-radius: 14px;
-    padding: 1rem 1.25rem;
-}
-
-.help-step__badge {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: var(--orange);
-    color: #fff;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    font-size: 1.05rem;
-    flex-shrink: 0;
-}
-
 .help-volunteer {
     max-width: 1200px;
     margin: 3rem auto;
@@ -1390,50 +1408,6 @@ nav ul li a {
     margin: 0.4rem 0 0;
 }
 
-.help-programs {
-    max-width: 1200px;
-    margin: 2.5rem auto 3.5rem;
-    padding: 0 1.5rem;
-}
-
-.help-programs__header h2 {
-    margin: 0.35rem 0;
-    color: var(--purple-dark);
-}
-
-.help-programs__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-.help-program-card {
-    background: linear-gradient(135deg, rgba(109, 40, 217, 0.08), rgba(251, 146, 60, 0.06));
-    border: 1px solid rgba(109, 40, 217, 0.12);
-    border-radius: 16px;
-    padding: 1.5rem;
-}
-
-.help-program-card h3 {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--purple-dark);
-    margin: 0 0 0.75rem;
-    font-size: 1.1rem;
-}
-
-.help-program-card h3 i {
-    color: var(--orange);
-    font-size: 1.3rem;
-}
-
-.help-program-card p {
-    margin: 0;
-    color: #4a4a6a;
-    line-height: 1.6;
-}
 
 .help-pill {
     display: inline-flex;
@@ -1492,7 +1466,7 @@ nav ul li a {
 }
 
 
-/* Gallery Page */
+/* Gallery page */
 .gallery-hero {
     max-width: 1200px;
     margin: 3rem auto;
@@ -3219,7 +3193,7 @@ nav ul li a {
         padding: 1.2rem;
     }
 
-    .help-steps {
+    .about-values {
         padding: 0 1rem;
     }
 
@@ -3230,15 +3204,6 @@ nav ul li a {
     .help-volunteer__card {
         grid-template-columns: 1fr;
         padding: 1.5rem;
-    }
-
-    .help-programs {
-        padding: 0 1rem;
-    }
-
-    .help-programs__grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
     }
 
     .help-cta {
