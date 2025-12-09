@@ -2989,93 +2989,6 @@ nav ul li a {
         font-size: 1.2rem;
     }
 
-    .nav-toggle {
-        display: block;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0.5rem;
-        z-index: 25;
-    }
-
-    .nav-actions,
-    .nav-right {
-        display: none;
-    }
-
-    .nav-menu {
-        position: fixed;
-        top: 90px;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: calc(73vh - 70px);
-        background: #ffffff;
-        z-index: 20;
-        transform: translateY(-100%);
-        overflow-y: auto;
-        transition: transform 0.5s ease, opacity 0.5s ease;
-        opacity: 0;
-        pointer-events: none;
-        border-radius: 15px;
-    }
-
-    .nav-menu.open {
-        transform: translateY(0);
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    .nav-menu ul {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 1rem 0;
-        gap: 0;
-    }
-
-    .nav-menu ul li {
-        width: 100%;
-        margin: 0;
-    }
-
-    .nav-menu ul li a {
-        width: auto;
-        padding: 0.75rem 1.5rem;
-        border-radius: 15px;
-        margin: 0;
-        font-size: 1rem;
-        color: #4d3b80;
-        display: inline-block;
-    }
-
-    .nav-menu ul li a::after {
-        display: none;
-    }
-
-    .nav-menu ul li a:hover,
-    .nav-menu ul li a[aria-current="page"] {
-        background-color: #f3e8ff;
-        color: #6d28d9;
-    }
-
-    .nav-menu ul li a.nav-btn-donate {
-        background-color: #fb923c !important;
-        color: #ffffff !important;
-        border: none !important;
-        margin: 0.75rem 1rem;
-        width: calc(100% - 2rem);
-    }
-
-    .nav-container {
-        flex-wrap: nowrap;
-        min-height: 70px;
-        padding: 0 1rem;
-    }
-
-    .logo-img {
-        height: 40px;
-    }
-
     .page-banner {
         padding-top: calc(150px + 3rem);
         min-height: 280px;
@@ -3434,13 +3347,92 @@ nav ul li a {
     }
 }
 
-@media (max-width: 900px) {
-    .nav-menu ul li a {
-        font-size: 0.98rem;
-        padding: 0.4rem 0.7rem;
+@media (max-width: 1024px) {
+    .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        z-index: 25;
     }
-    .logo-nav {
-        font-size: 1.1rem;
+
+    .nav-actions,
+    .nav-right {
+        display: none;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 90px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: calc(73vh - 70px);
+        background: #ffffff;
+        z-index: 20;
+        transform: translateY(-100%);
+        overflow-y: auto;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        opacity: 0;
+        pointer-events: none;
+        border-radius: 15px;
+    }
+
+    .nav-menu.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem 0;
+        gap: 0;
+    }
+
+    .nav-menu ul li {
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav-menu ul li a {
+        width: auto;
+        padding: 0.75rem 1.5rem;
+        border-radius: 15px;
+        margin: 0;
+        font-size: 1rem;
+        color: #4d3b80;
+        display: inline-block;
+    }
+
+    .nav-menu ul li a::after {
+        display: none;
+    }
+
+    .nav-menu ul li a:hover,
+    .nav-menu ul li a[aria-current="page"] {
+        background-color: #f3e8ff;
+        color: #6d28d9;
+    }
+
+    .nav-menu ul li a.nav-btn-donate {
+        background-color: #fb923c !important;
+        color: #ffffff !important;
+        border: none !important;
+        margin: 0.75rem 1rem;
+        width: calc(100% - 2rem);
+    }
+
+    .nav-container {
+        flex-wrap: nowrap;
+        min-height: 70px;
+        padding: 0 1rem;
+    }
+
+    .logo-img {
+        height: 40px;
     }
 }
 
